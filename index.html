@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic JS Slider</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="styles/css/slider.css">
+    <link rel="stylesheet" href="styles/css/carousel.css">
 </head>
 
 <body>
@@ -14,23 +14,67 @@
         <button class="play-pause" data-playing="false" role="switch" aria-checked="false">Play</button>
         <input type="range" id="volume" min="0" max="2" value="1" step="0.01">
     </div>
-    <div class="wrapper">
-        <div id="buttons-wrapper">
-            <button class="left slider-button"><i class="material-icons">
-                    chevron_left
-                </i></button>
-            <button class="right slider-button"><i class="material-icons">
-                    chevron_right
-                </i></button>
+    <div id="image-wrapper">
+        <div class="slide slide1">
+            <img src="images/ahmed-carter-XzGIUm4GJGc-unsplash.jpg" alt="" />
+            <img class="slide-alt" src=" images/yifei-chen-HiBHCz5xZBU-unsplash.jpg" alt="" />
         </div>
-        <div class="slide-wrapper">
-            <img class="slide" src="images/david-clode-RAfIk-ZKbPk-unsplash.jpg" />
-            <img class="slide" src="images/itengyart-Pm2wSt4WwgI-unsplash.jpg" />
-            <img class="slide" src="images/lesly-juarez-4JDPLjR1Ew4-unsplash.jpg" />
-            <img class="slide" src="images/neil-cooper-uwI8R_FyLrI-unsplash.jpg" />
-            <img class="slide" src="images/sophia-muller-loP8xxkZIk8-unsplash.jpg" />
+        <div class="slide slide2">
+            <img src="images/yifei-chen-HiBHCz5xZBU-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/vincent-van-zalinge-_d0zgyMmYT8-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide3">
+            <img src="images/vincent-van-zalinge-_d0zgyMmYT8-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/tiago-rosado-mN4BylzUvcI-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide4">
+            <img src="images/tiago-rosado-mN4BylzUvcI-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/stephen-leonardi-3amWPHUo994-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide5">
+            <img src="images/stephen-leonardi-3amWPHUo994-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/sergey-pesterev-_VqyrvQi6do-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide6">
+            <img src="images/sergey-pesterev-_VqyrvQi6do-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/patrick-hendry-remPwE2zZus-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide7">
+            <img src="images/patrick-hendry-remPwE2zZus-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/nicolas-cool-lGe2WE9TTOU-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide8">
+            <img src="images/nicolas-cool-lGe2WE9TTOU-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/lucas-newton-LavlJham18k-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide9">
+            <img src="images/lucas-newton-LavlJham18k-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/kurt-cotoaga-aXU2--0QUjI-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide10">
+            <img src="images/kurt-cotoaga-aXU2--0QUjI-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/kt-YrMG1z7i-SQ-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide11">
+            <img src="images/kt-YrMG1z7i-SQ-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/kevin-charit-1d3xIXyj1kU-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide12">
+            <img src="images/kevin-charit-1d3xIXyj1kU-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/ilkin-babayev-D-Zz4om1dqQ-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide13">
+            <img src="images/ilkin-babayev-D-Zz4om1dqQ-unsplash.jpg" alt="" />
+            <img class="slide-alt" src="images/dennis-buchner-lYTFi-g-qY0-unsplash.jpg" alt="" />
+        </div>
+        <div class="slide slide14">
+            <img src="images/dennis-buchner-lYTFi-g-qY0-unsplash.jpg" alt="" />
+            <img c;ass="slide-alt" src="images/ahmed-carter-XzGIUm4GJGc-unsplash.jpg" alt="" />
         </div>
     </div>
+    <audio type="audio/mpeg">
+    </audio>
+    <script src="scripts/js/carousel.js"></script>
 </body>
 
 </html>
