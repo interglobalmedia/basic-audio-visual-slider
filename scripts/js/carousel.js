@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const audioElement = document.querySelector('audio')
     /* sets the loop attribute dynamically by setting the loop property on the audio element. */
     audioElement.loop = true
-    // set track to audioElement.src
-    audioElement.src = `../audio/Bumblebee.mp3`
     // pass it into the audio context
     const track = audioContext.createMediaElementSource(audioElement)
 
