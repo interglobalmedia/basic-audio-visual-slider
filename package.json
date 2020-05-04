@@ -6,7 +6,7 @@
     "scripts": {
         "scss": "node-sass --watch styles/scss -o styles/css",
         "clean": "rm -rf dist/ && mkdir dist/",
-        "build": "cp -R images scripts styles dist/ && cp index.html dist/",
+        "build": "cp -R audio images scripts styles dist/ && cp index.html dist/",
         "deploy": "gh-pages -d dist"
     },
     "repository": {
