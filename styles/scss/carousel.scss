@@ -6,9 +6,10 @@
 
 body {
     background: #000;
+    font-size: 1rem;
 }
 
-.wrapper {
+#image-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -16,72 +17,84 @@ body {
     background-size: cover;
     background-position: center center;
     justify-content: space-between;
+
+    div {
+        animation-name: fader1;
+        animation-delay: 3s;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        .slide-alt {
+            animation-name: fader2;
+            animation-delay: 2s;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    }
 }
 
 .slide {
-    position: fixed;
-    z-index: 10;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    /* change the value for a faster or slower transition between slides */
-    -webkit-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    // opacity: 0;
-    left: 0px;
-    top: 3rem;
-    height: 100vh;
+    position: relative;
+    margin-top: 3rem;
+
+    img {
+        position: fixed;
+        z-index: 10;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        left: 0px;
+        top: 3rem;
+        height: 100vh;
+        -webkit-transition: opacity 1.0s ease-in-out;
+        -moz-transition: opacity 1.0s ease-in-out;
+        -o-transition: opacity 1.0s ease-in-out;
+        transition: opacity 1.0s ease-in-out;
+    }
+
+    .slide-alt {
+        -webkit-transition: opacity 0.25s ease-in-out;
+        -moz-transition: opacity 0.25s ease-in-out;
+        -o-transition: opacity 0.25s ease-in-out;
+        transition: opacity 0.25s ease-in-out;
+    }
+}
+
+@keyframes fader1 {
+
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.0,
+    }
+}
+
+@keyframes fader2 {
+
+    0% {
+        opacity: 0.0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0,
+    }
 }
 
 img {
     width: 100%;
     height: 100%;
-}
-
-/* class to show the current slide */
-.showing {
-    opacity: 1;
-    z-index: 2;
-}
-
-#buttons-wrapper {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-
-.left {
-    left: 0;
-    -ms-transform: translateY(-40%);
-    transform: translateY(-40%);
-    -ms-transform: translateX(-20%);
-    transform: translateX(-20%);
-}
-
-.right {
-    right: 0;
-    -ms-transform: translateY(40%);
-    transform: translateY(40%);
-    -ms-transform: translateX(20%);
-    transform: translateX(20%);
-}
-
-.left,
-.right {
-    position: fixed;
-    top: 40%;
-    z-index: 20;
-    color: #ff9800;
-    padding: 0 1.5rem;
-    font-size: 2.5rem;
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
-.material-icons {
-    font-size: 6rem;
-    font-weight: 400;
 }
 
 /* audio- range styling */
