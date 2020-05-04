@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (e) => {
     let slideIndex = 0
 
     carousel()
 
     function carousel() {
         let i
-        let slides = document.querySelectorAll('.wrapper .slide')
+        let slides = document.getElementsByClassName('slide')
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = 'none'
         }
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slideIndex = 1
         }
         slides[slideIndex - 1].style.display = 'block'
-        setTimeout(carousel, 2000)
+        setTimeout(carousel, 4500)
     }
 
     // web audio api related
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* sets the loop attribute dynamically by setting the loop property on the audio element. */
     audioElement.loop = true
     // set track to audioElement.src
-    audioElement.src = `../audio/Late_Night_Drive.mp3`
+    audioElement.src = `../audio/Bumblebee.mp3`
     // pass it into the audio context
     const track = audioContext.createMediaElementSource(audioElement)
 
@@ -76,3 +76,27 @@ document.addEventListener('DOMContentLoaded', () => {
         false
     )
 })
+
+window.addEventListener(
+    'DOMContentLoaded',
+    function (e) {
+        const stage1 = document.getElementById('image-wrapper')
+        const arr1 = stage1.getElementsByTagName('div')
+        const stage2 = document.getElementById('image-wrapper')
+        const arr2 = stage2.getElementsByTagName('img')
+        const fadeComplete1 = function (e) {
+            stage1.appendChild(arr1[0])
+        }
+        const fadeComplete2 = function (e) {
+            stage2.appendChild(arr2[1])
+        }
+
+        for (let i = 0; i < arr1.length; i++) {
+            arr2[i].addEventListener('animationend', fadeComplete1, false)
+            for (let j = 0; j < arr2.length; j++) {
+                arr2[j].addEventListener('animationend', fadeComplete2, false)
+            }
+        }
+    },
+    false
+)
