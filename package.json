@@ -1,0 +1,26 @@
+{
+    "name": "basic-audio-visual-slider",
+    "version": "1.0.0",
+    "description": "An audio visual carousel built with JavaScript and the Web Audio API",
+    "main": "index.js",
+    "scripts": {
+        "scss": "node-sass --watch styles/scss -o styles/css",
+        "clean": "rm -rf dist/ && mkdir dist/",
+        "build": "cp -R images scripts styles dist/ && cp index.html dist/",
+        "deploy": "gh-pages -d dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/interglobalmedia/basic-audio-visual-slider.git"
+    },
+    "author": "Maria D. Campbell",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/interglobalmedia/basic-audio-visual-slider/issues"
+    },
+    "homepage": "https://github.com/interglobalmedia/basic-audio-visual-slider#readme",
+    "dependencies": {
+        "gh-pages": "^2.2.0",
+        "node-sass": "^4.14.0"
+    }
+}
