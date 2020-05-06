@@ -61,8 +61,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         'ended',
         () => {
             playButton.dataset.playing = 'false'
-        },
-        false
+        }
     )
     const volumeControl = document.querySelector('#volume')
     volumeControl.addEventListener(
