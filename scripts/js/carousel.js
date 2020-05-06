@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 audioElement.play()
                 this.dataset.playing = 'true'
                 playButton.innerHTML = `Pause`
-                playButton.style.width = '90px'
             } else if (this.dataset.playing === 'true') {
                 audioElement.pause()
                 this.dataset.playing = 'false'
