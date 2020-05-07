@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (e) => {
+window.addEventListener('DOMContentLoaded', (e) => {
     let slideIndex = 0
 
     carousel()
