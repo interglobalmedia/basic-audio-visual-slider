@@ -21,6 +21,19 @@
     "homepage": "https://github.com/interglobalmedia/basic-audio-visual-slider#readme",
     "dependencies": {
         "gh-pages": "^2.2.0",
-        "node-sass": "^4.14.0"
+        "node-sass": "^4.14.1"
+    },
+    "devDependencies": {
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.2",
+        "prettier": "2.0.5"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,css,md}": "prettier --write"
     }
 }
