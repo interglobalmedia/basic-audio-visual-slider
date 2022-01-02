@@ -1,203 +1,238 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
 
 body {
-  background: #000;
-  font-size: 1rem; }
+	background: #000;
+	font-size: 1rem;
+}
 
 #image-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  justify-content: space-between; }
-  #image-wrapper div {
-    animation-name: fader1;
-    animation-delay: 3s;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; }
-    #image-wrapper div .slide-alt {
-      animation-name: fader2;
-      animation-delay: 2s;
-      animation-duration: 4s;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-      animation-direction: alternate; }
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	justify-content: space-between;
+}
+#image-wrapper div {
+	animation-name: fader1;
+	animation-delay: 3s;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+#image-wrapper div .slide-alt {
+	animation-name: fader2;
+	animation-delay: 2s;
+	animation-duration: 4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
 
 .slide {
-  position: relative;
-  margin-top: 3rem; }
-  .slide img {
-    position: fixed;
-    z-index: 10;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    left: 0px;
-    top: 3rem;
-    height: 100vh;
-    -webkit-transition: opacity 1.0s ease-in-out;
-    -moz-transition: opacity 1.0s ease-in-out;
-    -o-transition: opacity 1.0s ease-in-out;
-    transition: opacity 1.0s ease-in-out; }
-  .slide .slide-alt {
-    -webkit-transition: opacity 0.25s ease-in-out;
-    -moz-transition: opacity 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out;
-    transition: opacity 0.25s ease-in-out; }
+	position: relative;
+	margin-top: 3rem;
+}
+.slide img {
+	position: fixed;
+	z-index: 10;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	left: 0px;
+	top: 3rem;
+	height: 100vh;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+.slide .slide-alt {
+	-webkit-transition: opacity 0.25s ease-in-out;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-o-transition: opacity 0.25s ease-in-out;
+	transition: opacity 0.25s ease-in-out;
+}
 
 @keyframes fader1 {
-  0% {
-    opacity: 1.0; }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 0; } }
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 @keyframes fader2 {
-  0% {
-    opacity: 0.0; }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 1; } }
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 img {
-  width: 100%;
-  height: 100%; }
+	width: 100%;
+	height: 100%;
+}
 
 /* audio- range styling */
-input[type=range] {
-  /* Hides the slider so that custom slider can be made */
-  -webkit-appearance: none;
-  /* Specific width is required for Firefox. */
-  width: 50%; }
+input[type='range'] {
+	/* Hides the slider so that custom slider can be made */
+	-webkit-appearance: none;
+	/* Specific width is required for Firefox. */
+	width: 50%;
+}
 
-input[type=range]:focus {
-  outline: none; }
+input[type='range']:focus {
+	outline: none;
+}
 
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none; }
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
 
-input[type=range]:focus {
-  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-  outline: none; }
+input[type='range']:focus {
+	/* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+	outline: none;
+}
 
 /* Styling the track */
-input[type=range]::-webkit-slider-runnable-track {
-  width: 50%;
-  height: 10px;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
-  background: #a769cc;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101; }
+input[type='range']::-webkit-slider-runnable-track {
+	width: 50%;
+	height: 10px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
+	background: #a769cc;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+}
 
 /* Special Styling for Webkit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 1px solid #a769cc;
-  height: 34px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ff9800;
-  cursor: pointer;
-  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  margin-top: -12px;
-  /* Add cool effects to your sliders! */
-  box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d; }
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: 1px solid #a769cc;
+	height: 34px;
+	width: 16px;
+	border-radius: 3px;
+	background: #ff9800;
+	cursor: pointer;
+	/* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+	margin-top: -12px;
+	/* Add cool effects to your sliders! */
+	box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
+}
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #a769cc; }
+input[type='range']:focus::-webkit-slider-runnable-track {
+	background: #a769cc;
+}
 
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 10px;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
-  background: #a769cc;
-  border-radius: 1.3px;
-  border: 0.2px solid #a769cc; }
+input[type='range']::-moz-range-track {
+	width: 100%;
+	height: 10px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
+	background: #a769cc;
+	border-radius: 1.3px;
+	border: 0.2px solid #a769cc;
+}
 
 /* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
-  border: 1px solid #a769cc;
-  height: 34px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ff9800;
-  cursor: pointer; }
+input[type='range']::-moz-range-thumb {
+	box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
+	border: 1px solid #a769cc;
+	height: 34px;
+	width: 16px;
+	border-radius: 3px;
+	background: #ff9800;
+	cursor: pointer;
+}
 
 /* This gives us invisible or unstyled range inputs in all browsers. Now we can apply our custom styles.*/
-input[type=range]::-ms-track {
-  width: 50%;
-  cursor: pointer;
-  height: 10px;
-  cursor: pointer;
-  /* Hides the slider so custom styles can be added */
-  background: transparent;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent; }
+input[type='range']::-ms-track {
+	width: 50%;
+	cursor: pointer;
+	height: 10px;
+	cursor: pointer;
+	/* Hides the slider so custom styles can be added */
+	background: transparent;
+	border-color: transparent;
+	border-width: 16px 0;
+	color: transparent;
+}
 
-input[type=range]::-ms-fill-lower {
-  background: #a769cc;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d; }
+input[type='range']::-ms-fill-lower {
+	background: #a769cc;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
+}
 
-input[type=range]::-ms-fill-upper {
-  background: #a769cc;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d; }
+input[type='range']::-ms-fill-upper {
+	background: #a769cc;
+	border: 0.2px solid #010101;
+	border-radius: 2.6px;
+	box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
+}
 
 /* All the same stuff for IE */
-input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
-  border: 1px solid #a769cc;
-  height: 34px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ff9800;
-  cursor: pointer; }
+input[type='range']::-ms-thumb {
+	box-shadow: 1px 1px 1px pink, 0px 0px 1px #0d0d0d;
+	border: 1px solid #a769cc;
+	height: 34px;
+	width: 16px;
+	border-radius: 3px;
+	background: #ff9800;
+	cursor: pointer;
+}
 
-input[type=range]:focus::-ms-fill-lower {
-  background: #a769cc; }
+input[type='range']:focus::-ms-fill-lower {
+	background: #a769cc;
+}
 
-input[type=range]:focus::-ms-fill-upper {
-  background: #a769cc; }
+input[type='range']:focus::-ms-fill-upper {
+	background: #a769cc;
+}
 
 /* Specific layout styling */
 .audio-buttons,
-input[type=range] {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 0.25rem auto 0; }
+input[type='range'] {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 0.25rem auto 0;
+}
 
 .audio-buttons {
-  width: 100%;
-  background: #000; }
+	width: 100%;
+	background: #000;
+}
 
 .play-pause {
-  padding: 7px;
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  margin-right: 0.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  outline: none;
-  background: #ff9800;
-  color: #a769cc;
-  border: 1px solid #a769cc;
-  width: 90px;
-  letter-spacing: 0.09rem;
-  font-weight: bold;
-  cursor: pointer; }
+	padding: 7px;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	margin-right: 0.5rem;
+	font-size: 1rem;
+	border-radius: 5px;
+	outline: none;
+	background: #ff9800;
+	color: #a769cc;
+	border: 1px solid #a769cc;
+	width: 90px;
+	letter-spacing: 0.09rem;
+	font-weight: bold;
+	cursor: pointer;
+}
